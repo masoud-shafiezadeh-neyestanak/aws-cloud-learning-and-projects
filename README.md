@@ -55,16 +55,4 @@ My primary learning resources include:
 - [AWS Architecture Center](https://aws.amazon.com/architecture/)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 
-## Current Focus
 
-Currently focusing on AWS Solutions Architect – Associate (SAA-C03) preparation, strengthening foundational cloud knowledge, and developing practical experience with AWS services.
-
-New labs, projects, and technical documentation will be added progressively as my learning advances.
-
-## Disclaimer
-
-This repository represents an ongoing personal learning and practical development journey. The documented exercises and projects are intended to demonstrate learning, experimentation, and technical progress. They should not be interpreted as claims of production-scale implementation experience.
-
----
-
-**Learning by building. Documenting by doing. Improving continuously.**
