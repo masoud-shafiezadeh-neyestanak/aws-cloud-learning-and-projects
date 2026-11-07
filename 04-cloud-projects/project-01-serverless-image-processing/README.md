@@ -171,3 +171,27 @@ project-01-serverless-image-processing/
 ├── architecture/
 │   └── architecture.md
 │
+├── lambda/
+│   └── lambda_function.py
+│
+├── documentation/
+│   ├── 01-iam-permissions.md
+│   ├── 02-deployment-guide.md
+│   └── 03-testing-and-troubleshooting.md
+│
+└── screenshots/
+    ├── README.md
+    └── 01-s3-originals-and-thumbnails.png
+```
+
+## 12. Project Status
+
+**Version:** 1.0
+
+**Status:** Successfully implemented and end-to-end tested.
+
+**Project Type:** Hands-on AWS Serverless Cloud Project
+
+---
+
+*This project is part of an ongoing AWS Cloud Learning and Projects portfolio.*
