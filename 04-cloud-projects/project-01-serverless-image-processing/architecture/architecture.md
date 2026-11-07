@@ -12,16 +12,22 @@ The Lambda function uses the Python Pillow library to resize the image and store
 
 ```mermaid
 flowchart TD
-    A[User] -->|Uploads image| B[Amazon S3]
+    A[User] -->|Upload image| B[Amazon S3]
     B --> C[originals/]
     C -->|ObjectCreated Event| D[AWS Lambda]
-    D -->|Read original image| B
-    D --> E[Pillow Image Processing]
-    E -->|Resize and optimize| F[Thumbnail]
-    F -->|Upload| G[Amazon S3 thumbnails/]
-    D --> H[Amazon CloudWatch Logs]
-    I[IAM Execution Role] -.->|Permissions| D
-    I -.->|S3 access permissions| B
+
+    D -->|Assumes execution role| I[IAM Execution Role]
+
+    I -.->|s3:GetObject| B
+    I -.->|s3:PutObject| B
+    I -.->|CloudWatch Logs permissions| H[Amazon CloudWatch Logs]
+
+    D -->|Process image| E[Pillow Library]
+    E -->|Generate thumbnail| D
+    D -->|Upload processed image| F[S3 thumbnails/]
+
+    B -.->|Invocation permission| D
+
 ```
 
 ## 3. Workflow Description
