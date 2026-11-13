@@ -14,3 +14,8 @@ Project documentation may include:
 - Lessons Learned
 
 The goal is to demonstrate practical cloud knowledge through documented projects and hands-on implementation.
+
+## Current Projects
+
+- [Project 01 — Serverless Image Processing](./project-01-serverless-image-processing/)
+- [Project 02 — Static Company Website on S3 and CloudFront](./project-02-static-company-website/) — source template and deployment plan prepared; AWS deployment pending.
