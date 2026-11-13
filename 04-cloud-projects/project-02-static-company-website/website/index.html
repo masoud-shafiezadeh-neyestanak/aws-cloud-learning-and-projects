@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A professional company website template hosted on AWS S3 and Amazon CloudFront.">
+  <meta name="theme-color" content="#101827">
+  <title>Your Company | Practical Solutions. Clear Results.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172235;
+      --muted: #64748b;
+      --line: #e4eaf1;
+      --surface: #f5f8fc;
+      --brand: #176b87;
+      --brand-dark: #0e4e68;
+      --white: #ffffff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); line-height: 1.6; }
+    a { color: inherit; }
+    .container { width: min(1100px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--brand); color: white; font-weight: 800; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 24px; color: var(--muted); font-size: .94rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover, a:focus-visible { color: var(--brand); }
+    .hero { padding: 88px 0 82px; background: linear-gradient(135deg, #f2f7fb 0%, #ffffff 62%, #edf6f8 100%); }
+    .eyebrow { margin: 0 0 18px; color: var(--brand); font-size: .78rem; text-transform: uppercase; letter-spacing: .16em; font-weight: 800; }
+    h1 { max-width: 760px; margin: 0; font-size: clamp(2.5rem, 6vw, 4.7rem); line-height: 1.06; letter-spacing: -.055em; }
+    .hero-copy { max-width: 660px; margin: 24px 0 30px; color: var(--muted); font-size: 1.12rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 19px; border: 1px solid var(--brand); border-radius: 8px; background: var(--brand); color: var(--white); text-decoration: none; font-weight: 700; }
+    .button.secondary { background: transparent; color: var(--brand-dark); }
+    .button:hover { filter: brightness(.94); }
+    section { padding: 72px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 30px; }
+    h2 { margin: 0 0 12px; font-size: clamp(1.8rem, 3.5vw, 2.5rem); line-height: 1.2; letter-spacing: -.035em; }
+    .section-intro { margin: 0; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 25px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+    .card-number { display: inline-grid; place-items: center; width: 36px; height: 36px; margin-bottom: 17px; border-radius: 9px; background: #eaf4f7; color: var(--brand-dark); font-size: .85rem; font-weight: 800; }
+    h3 { margin: 0 0 9px; font-size: 1.13rem; }
+    .card p, .about-copy { margin: 0; color: var(--muted); }
+    .about { background: var(--surface); }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+    .about-panel { padding: 28px; border-radius: 14px; background: #14263a; color: white; }
+    .about-panel p { margin: 9px 0 0; color: #cfdae5; }
+    .contact-box { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 30px; border: 1px solid var(--line); border-radius: 14px; }
+    .contact-box p { margin: 8px 0 0; color: var(--muted); }
+    .site-footer { padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 15px 0; }
+      .nav-links { gap: 14px; }
+      .hero { padding: 64px 0; }
+      section { padding: 56px 0; }
+      .cards, .about-grid { grid-template-columns: 1fr; }
+      .about-grid { gap: 24px; }
+      .contact-box { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Your Company home">
+        <span class="brand-mark" aria-hidden="true">Y</span>
+        <span>Your Company</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <p class="eyebrow">A clearer way forward</p>
+        <h1>Practical solutions.<br>Clear results.</h1>
+        <p class="hero-copy">We help organizations move from ideas to action through dependable services, thoughtful planning, and a focus on long-term value.</p>
+        <div class="actions">
+          <a class="button" href="#contact">Contact our team</a>
+          <a class="button secondary" href="#services">Explore services</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">What we do</p>
+          <h2>Services built around your goals</h2>
+          <p class="section-intro">Replace these sample descriptions with the services your company actually provides.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-number">01</span>
+            <h3>Business Operations</h3>
+            <p>Practical operational support that helps teams organize work, improve processes, and deliver consistently.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">02</span>
+            <h3>Project Delivery</h3>
+            <p>Structured planning, coordination, and communication to move projects from scope to measurable outcomes.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">03</span>
+            <h3>Digital Solutions</h3>
+            <p>Fit-for-purpose digital tools and technology services that support better ways of working.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About us</p>
+          <h2>Built on trust, clarity, and delivery.</h2>
+        </div>
+        <div>
+          <p class="about-copy">Your Company is a sample company profile. Use this section to introduce your organization, explain who you serve, and describe what makes your approach valuable. Keep the message specific, factual, and focused on the needs of your customers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <p class="eyebrow">Start a conversation</p>
+            <h2>Have a project in mind?</h2>
+            <p>Replace the sample email address with your company's public contact address.</p>
+          </div>
+          <a class="button" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year">2026</span> Your Company. All rights reserved.</span>
+      <span>Company website starter template</span>
+    </div>
+  </footer>
+</body>
+</html>
