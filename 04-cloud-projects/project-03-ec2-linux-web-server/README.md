@@ -1,7 +1,7 @@
 # Project 03 — EC2 Linux Web Server on AWS
 
 **Project Type:** Hands-on AWS Implementation  
-**Status:** Deployment, testing, and documentation completed; AWS cleanup pending  
+**Status:** Deployment, testing, documentation, and AWS resource cleanup completed; final billing verification pending.  
 **Start Date:** 14 November 2026  
 **AWS Region:** US East (N. Virginia) — `us-east-1`
 
@@ -233,10 +233,11 @@ The EC2 instance and associated billable resources must be reviewed and cleaned 
 - [x] Four implementation screenshots uploaded.
 - [x] Architecture documentation completed.
 - [x] Deployment and testing documentation completed.
-- [ ] Review final AWS costs.
-- [ ] Terminate the EC2 instance.
-- [ ] Verify EBS volume and public IPv4 cleanup.
-- [ ] Confirm no unnecessary billable resources remain.
+- [x] Review current AWS cost estimates (USD 0.00 reported).
+- [x] Terminate the EC2 instance.
+- [x] Verify EBS volume and public IPv4 cleanup.
+- [x] Clean up project-specific Security Group and verify no remaining snapshots.
+- [ ] Verify final November 2026 invoice after billing period closure.
 
 ## 11. Project Status
 
