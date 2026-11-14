@@ -1,14 +1,17 @@
+
 # Screenshot Evidence
 
-This directory contains visual evidence collected during the implementation and validation of Project 03 — EC2 Linux Web Server.
+This directory contains visual evidence collected during the implementation and testing of Project 03 — EC2 Linux Web Server.
 
-## Evidence
+## Implementation Evidence
 
 | File | Description | Status |
 |---|---|---|
-| `01-ec2-web-server-running.png` | Custom Nginx-hosted web page displayed through the EC2 public IPv4 address. | Pending upload |
-| `02-ec2-instance-details.png` | EC2 instance configuration and running state. | Planned |
-| `03-security-group-rules.png` | Inbound SSH and HTTP rules for the project security group. | Planned |
-| `04-http-response-test.png` | Successful local HTTP response from Nginx (`200 OK`). | Planned |
+| [01-ec2-web-server-running.png](./01-ec2-web-server-running.png) | Custom website successfully displayed through the EC2 public IPv4 address. | Completed |
+| [02-ec2-instance-details.png](./02-ec2-instance-details.png) | EC2 instance configuration, running state, and system details. | Completed |
+| [03-security-group-rules.png](./03-security-group-rules.png) | Inbound SSH and HTTP rules and outbound traffic configuration. | Completed |
+| [04-http-response-test.png](./04-http-response-test.png) | Successful local HTTP response from Nginx (200 OK). | Completed |
 
-Screenshots should avoid exposing private keys, credentials, or unrelated account information.
+## Security Note
+
+Screenshots are reviewed to avoid exposing private keys, credentials, personal IP addresses, and sensitive AWS account information.
